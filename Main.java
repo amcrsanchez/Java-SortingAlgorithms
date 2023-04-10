@@ -1,8 +1,24 @@
+import java.lang.*;
 public class Main {
     public static void main(String[] args){
         int[] arr = {5,12,34,5,6,21,99,1,0,87,2,1,5,4,2,1};
-        int[] sortedArr = Sort.merge(arr);
-        printArray(sortedArr);
+        // quick sort
+        int[] arr0 = arr.clone();
+        long time0 = System.nanoTime();
+        int[] sortedArr0 = Sort.quick(arr0);
+        System.out.println(String.format("Quick sort took %d ns", System.nanoTime() - time0));
+        printArray(sortedArr0);
+        // quick sort
+
+        System.out.println();
+
+        // merge sort
+        int[] arr1 = arr.clone();
+        long time1 = System.nanoTime();
+        int[] sortedArr1 = Sort.merge(arr1);
+        System.out.println(String.format("Merge sort took %d ns", System.nanoTime() - time1));
+        printArray(sortedArr1);
+        // merge sort
     }
 
     static void printArray(int[] arr){
