@@ -6,7 +6,7 @@ public class Merge {
         return arr;
     }
     static void iterativeSort(int start, int end, int[] arr){
-        if(start == end)
+        if(start >= end)
             return;
 
         int middle = start + ((end - start) /  2);

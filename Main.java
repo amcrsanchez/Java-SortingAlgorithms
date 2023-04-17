@@ -19,6 +19,16 @@ public class Main {
         System.out.println(String.format("Merge sort took %d ns", System.nanoTime() - time1));
         printArray(sortedArr1);
         // merge sort
+
+        System.out.println();
+
+        // heap sort
+        int[] arr2 = arr.clone();
+        long time2 = System.nanoTime();
+        int[] sortedArr2 = Sort.merge(arr2);
+        System.out.println(String.format("Heap sort took %d ns", System.nanoTime() - time2));
+        printArray(sortedArr2);
+        // heap sort
     }
 
     static void printArray(int[] arr){
